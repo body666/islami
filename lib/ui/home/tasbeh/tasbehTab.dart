@@ -105,7 +105,7 @@ List<String> text =[
   void clickonimage(){
     angle+=3;
 
-    if(counter==30){
+    if(counter==33){
       counter=0;
       currentindex++;
       if(currentindex>2)
