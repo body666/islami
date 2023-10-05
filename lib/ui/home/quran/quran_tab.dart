@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'ChapterTitleWidget.dart';
 class QuranTab extends StatelessWidget {
   List<String> names=[
