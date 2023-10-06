@@ -15,9 +15,7 @@ VerseWidget(this.content,this.index);
           textAlign: TextAlign.center,
           textDirection: TextDirection.rtl,
           style:
-          TextStyle(
-            fontSize: 20,
-          ),
+         Theme.of(context).textTheme.bodyMedium,
         )
     );
   }

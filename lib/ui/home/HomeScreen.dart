@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/ui/MyThemedata.dart';
 import 'package:islami/ui/home/hadeth/Hadeth_Tab%20.dart';
 import 'package:islami/ui/home/quran/quran_tab.dart';
 import 'package:islami/ui/home/radio/RadioTab.dart';
 import 'package:islami/ui/home/tasbeh/tasbehTab.dart';
+import 'package:islami/ui/home/settings/settings_Tab.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName ="home";
   @override
@@ -15,9 +17,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration:  BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/main_background.png"),
+          image: AssetImage(
+            MyThemeData.isDarkEnabled?
+                "assets/images/background_dark.png":
+              "assets/images/main_background.png"),
           fit: BoxFit.fill,
         )
       ),
@@ -51,6 +56,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),
                 label: "Radio"),
+            BottomNavigationBarItem(
+                backgroundColor: Theme.of(context).primaryColor,
+                icon: Icon(Icons.settings),
+                label: "Settings"),
+
+
+
+
           ],
         ),
         body:  tabs[selectedtabindex],
@@ -64,5 +77,6 @@ class _HomeScreenState extends State<HomeScreen> {
     HadethTab(),
     TasbehTab(),
     RadioTab(),
+    SettingsTab(),
   ];
 }

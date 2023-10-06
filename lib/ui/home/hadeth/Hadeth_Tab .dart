@@ -25,14 +25,12 @@ class _HadethTabState extends State<HadethTab> {
           width: double.infinity,
           decoration: BoxDecoration(
             border: Border.symmetric(horizontal: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).dividerColor,
               width: 2,
             ))
           ),
-          child: Text("Hadeth",style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
-          )),
+          child: Text("Hadeth",style: Theme.of(context).textTheme.titleMedium,
+          ),
         ),
         Expanded(
           flex: 3,

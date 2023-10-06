@@ -21,9 +21,8 @@ HadethTitleWidget(this.hadeth);
         alignment: Alignment.center,
           padding: EdgeInsets.all(8),
           child: Text(hadeth.title,style:
-            TextStyle(
-              fontSize: 25,
-            ),)
+          Theme.of(context).textTheme.titleMedium,
+          )
       ),
     );
   }

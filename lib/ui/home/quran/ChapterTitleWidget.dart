@@ -18,9 +18,8 @@ ChapterTitleWidget(this.title,this.index);
         alignment: Alignment.center,
           padding: EdgeInsets.all(8),
           child: Text(title,style:
-            TextStyle(
-              fontSize: 25,
-            ),)
+         Theme.of(context).textTheme.titleMedium,
+          )
       ),
     );
   }
